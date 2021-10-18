@@ -1,0 +1,61 @@
+@mixin themable($theme-name, $container-bg,$nav-bg, $left-bg, $right-bg, $innertext, $button-bg) { 
+    .#{$theme-name} {            
+        .container {  
+            background-color: $container-bg;  
+            border: 1px solid #000;   
+            display: flex; 
+            height: 500px; 
+            justify-content: space-between;   
+            margin: 0 auto; 
+            padding: 1em;  
+            width: 70%; 
+            * {  
+                    color: $innertext; 
+                    font-size: 0.8rem; 
+                    font-family: Arial, Helvetica, sans-serif; 
+                }  
+            .left { 
+                    background-color: $left-bg; 
+                        height: 100%; 
+                        width: 69%; 
+                } 
+            .right { 
+                    background-color: $right-bg;
+                    height: 100%; 
+                    position: relative;
+                    width: 29%; ;
+                } 
+            .button {
+                background-color: $button-bg;
+                margin:10px; 
+            }
+            nav {
+                display: flex;
+                margin: 0 auto;
+                padding: 1em;
+                width: 70%;
+                ul {
+                    margin: 10;
+                    padding: 0;
+                    list-style: none;
+                }
+                li { 
+                    display: inline-block;
+                    margin:2;
+                    background-color: $nav-bg;
+                    a {
+                        display: block;
+                        padding: 6px 12px;
+                        text-decoration: none;      
+                            &:hover {
+                                color:$container-bg;    
+                        }
+                    }
+                }
+            }
+        }
+    }
+    }
+@include themable(theme-1, #cde5c2, #68a777, #82aa91, rgba(235, 243, 231, 0.705), #36641ffa, #6cbd4686);
+@include themable(theme-2, #aba7e4, #645c92, #dadae0, #fff, #481b16, #cfd4dba8 );
+             

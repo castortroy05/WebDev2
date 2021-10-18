@@ -1,0 +1,29 @@
+.container div { 
+    width: 5em; 
+    height: 5em;
+    display: inline-block;          
+    padding: 0.5rem;  
+    border: silver 1px solid; 
+    
+    
+$num-colors: 10; 
+$base-color: #c24; 
+$spectrum: 180deg; 
+$offset: 30deg; 
+
+@for $i from 1 through 12 {
+ &:nth-child(#{$i}) {
+   background:adjust-hue($base-color,$offset+$spectrum/$num-colors*$i);
+  }
+}
+}
+
+
+
+@mixin transform($property) { 
+    -webkit-transform: $property; 
+    -ms-transform: $property;      
+     transform: $property; 
+  } 
+  .box { @include transform(rotate(30deg)); } 
+  

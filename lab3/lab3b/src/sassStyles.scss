@@ -1,0 +1,36 @@
+@import "base"; 
+
+$bgcolor: lightblue; 
+$textcolor: rgb(252, 113, 49); 
+$fontsize: 12px; 
+$fontStyle: Arial, Helvetica, sans-serif;;
+ 
+body { 
+    background-color: $bgcolor;
+    color: $textcolor; 
+    font-size: $fontsize; 
+} 
+
+P  {   
+    background-color: darken($bgcolor, 10%); 
+    font-family:$fontStyle; 
+}
+
+nav {  
+    ul {    margin: 0;       padding: 0;     
+           list-style: none; 
+    } 
+    li { display: inline-block;  
+    }   
+    a {
+       display: block;       
+       padding: 6px 12px;    
+       text-decoration: none; 
+    } 
+  } 
+  
+ .inverse {   
+     background-color: $primary-color;
+     color: white; 
+  } 
+  
